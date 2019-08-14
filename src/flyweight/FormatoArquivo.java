@@ -7,19 +7,18 @@ package flyweight;
 
 /**
  *
- * @author ALUNO
+ * @author Mateus
  */
 public class FormatoArquivo extends TipoArquivo {
-
-    protected TipoArquivo tipoArquivo;
-
-    public FormatoArquivo(String imagem) {
-        
+    protected Arquivo file;
+    public FormatoArquivo(String nome) {
+        this.file = new Arquivo(nome);
     }
 
     @Override
-    public void desenharArquivo(Ponto ponto) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public void movimentaArquivo(Ponto ponto) {
+        this.file.movimentaArquivo();
+        System.out.println("no ponto " + ponto.x +","+ponto.y);
     }
-
+    
 }

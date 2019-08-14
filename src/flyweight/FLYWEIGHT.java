@@ -15,7 +15,8 @@ public class FLYWEIGHT {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+       Servidor factory = new Servidor();
+       factory.getFlyweight(Servidor.Formatos.ARQUIVO).movimentaArquivo(new Ponto(0, 0));
     }
     
 }

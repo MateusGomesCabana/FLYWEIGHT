@@ -7,20 +7,8 @@ package flyweight;
 
 /**
  *
- * @author ALUNO
+ * @author Mateus
  */
-abstract class TipoArquivo {
-    public abstract void desenharArquivo(Ponto ponto);
-    
-    
-
-//    protected String nomeDoAquivo;
-//
-//    public TipoArquivo(String imagem) {
-//        this.nomeDoAquivo = imagem;
-//    }
-//
-//    public void desenharArquivo() {
-//        System.out.println(this.nomeDoAquivo + " desenhada!");
-//    }
+public abstract class TipoArquivo {
+    public abstract void movimentaArquivo(Ponto ponto);
 }

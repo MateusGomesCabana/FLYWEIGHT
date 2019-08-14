@@ -9,12 +9,13 @@ package flyweight;
  *
  * @author Mateus
  */
-class Ponto {
+class Arquivo {
+    protected String nomeDoAquivo;
 
-    public int x, y;
-
-    public Ponto(int x, int y) {
-        this.x = x;
-        this.y = y;
+    public Arquivo(String nomeDoAquivo) {
+        this.nomeDoAquivo = nomeDoAquivo;
+    }
+    public void movimentaArquivo() {
+        System.out.println(nomeDoAquivo + " Movimentado!");
     }
 }

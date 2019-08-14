@@ -11,21 +11,26 @@ import java.util.ArrayList;
  *
  * @author ALUNO
  */
-public class Arquivos {
+public class Servidor {
 
     protected ArrayList<TipoArquivo> arquivos;
 
-    public Arquivos() {
+    public enum Formatos {
+        ARQUIVO, ARQUIVO2
+    }
+
+    public Servidor() {
         this.arquivos = new ArrayList<>();
         arquivos.add(new FormatoArquivo("jogador.png"));
         arquivos.add(new FormatoArquivo("inimigo1.png"));
     }
 
-    public TipoArquivo getFlyweight(String arquivo) {
+    public TipoArquivo getFlyweight(Formatos arquivo) {
+
         switch (arquivo) {
-            case "jogador.png":
+            case ARQUIVO:
                 return arquivos.get(0);
-            case "inimigo1.png":
+            case ARQUIVO2:
                 return arquivos.get(1);
 
         }
